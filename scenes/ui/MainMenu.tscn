@@ -1,0 +1,141 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_iwbf0"]
+[ext_resource type="Texture2D" path="res://assets/img/menu.png" id="menu_bg"]
+[ext_resource type="AudioStream" path="res://assets/audio/menu_music.mp3" id="menu_music"]
+[ext_resource type="PackedScene" path="res://scenes/ui/settings_menu.tscn" id="settings_menu"]
+[ext_resource type="PackedScene" path="res://scenes/ui/save_slot_list.tscn" id="2_2ysvc"]
+
+[node name="MainMenu" type="Control" unique_id=782315845]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_iwbf0")
+
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=1815670973]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.05, 0.08, 1)
+
+[node name="Background" type="TextureRect" parent="." unique_id=1668194614]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("menu_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Shade" type="ColorRect" parent="." unique_id=1687670842]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.35)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=240846718]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Column" type="VBoxContainer" parent="CenterContainer" unique_id=153102954]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="Title" type="Label" parent="CenterContainer/Column" unique_id=1883837082]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+theme_override_colors/font_color = Color(0.85, 0.1, 0.1, 1)
+text = "PATIENT Z"
+horizontal_alignment = 1
+
+[node name="MainPanel" type="VBoxContainer" parent="CenterContainer/Column" unique_id=1027398258]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="CenterContainer/Column/MainPanel" unique_id=1564414472]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/Column/MainPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/Column/MainPanel" unique_id=221337719]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+
+[node name="PlayPanel" type="VBoxContainer" parent="CenterContainer/Column" unique_id=853318117]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="NewGameButton" type="Button" parent="CenterContainer/Column/PlayPanel" unique_id=651385971]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "New Game · 1 Player"
+
+[node name="NewGame2Button" type="Button" parent="CenterContainer/Column/PlayPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "New Game · 2 Players"
+
+[node name="ContinueButton" type="Button" parent="CenterContainer/Column/PlayPanel" unique_id=1187344210]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Continue"
+
+[node name="BackButton" type="Button" parent="CenterContainer/Column/PlayPanel" unique_id=73860339]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[node name="Slots" type="VBoxContainer" parent="CenterContainer/Column" unique_id=1046619438 instance=ExtResource("2_2ysvc")]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SettingsMenu" parent="CenterContainer/Column" instance=ExtResource("settings_menu")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=2011598581]
+unique_name_in_owner = true
+stream = ExtResource("menu_music")
+bus = &"Music"
+
+[connection signal="pressed" from="CenterContainer/Column/MainPanel/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CenterContainer/Column/MainPanel/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CenterContainer/Column/PlayPanel/NewGameButton" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="CenterContainer/Column/PlayPanel/NewGame2Button" to="." method="_on_new_game_2_players_pressed"]
+[connection signal="pressed" from="CenterContainer/Column/PlayPanel/ContinueButton" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="CenterContainer/Column/PlayPanel/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="slot_chosen" from="CenterContainer/Column/Slots" to="." method="_on_slot_chosen"]
+[connection signal="back_pressed" from="CenterContainer/Column/Slots" to="." method="_on_slots_back_pressed"]
+[connection signal="pressed" from="CenterContainer/Column/MainPanel/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="back_pressed" from="CenterContainer/Column/SettingsMenu" to="." method="_on_settings_back_pressed"]

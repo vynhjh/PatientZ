@@ -1,0 +1,79 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/items/stairs.gd" id="1_jafla"]
+[ext_resource type="PackedScene" path="res://scenes/environment/sign.tscn" id="2_e4luk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l47s"]
+albedo_color = Color(0.2, 0.22, 0.25, 1)
+metallic = 0.7
+roughness = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_afy7k"]
+size = Vector3(3, 3.2, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gnvl2"]
+albedo_color = Color(0.95, 0.75, 0.1, 1)
+roughness = 0.6
+
+[sub_resource type="BoxMesh" id="BoxMesh_faulo"]
+size = Vector3(3.02, 0.15, 0.32000002)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eniso"]
+size = Vector3(3.02, 0.15, 0.32000002)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h7f7f"]
+size = Vector3(3.02, 0.15, 0.32000002)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hyqvu"]
+resource_local_to_scene = true
+albedo_color = Color(1, 0, 0, 1)
+roughness = 0.4
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 4.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_l0hko"]
+size = Vector3(3.04, 0.1, 0.34)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fs8gs"]
+size = Vector3(3, 3.2, 0.3)
+
+[node name="Stairs" type="StaticBody3D" unique_id=1664892806]
+script = ExtResource("1_jafla")
+
+[node name="Gate" type="MeshInstance3D" parent="." unique_id=449710344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+material_override = SubResource("StandardMaterial3D_6l47s")
+mesh = SubResource("BoxMesh_afy7k")
+
+[node name="Bar1" type="MeshInstance3D" parent="." unique_id=1838312781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+material_override = SubResource("StandardMaterial3D_gnvl2")
+mesh = SubResource("BoxMesh_faulo")
+
+[node name="Bar2" type="MeshInstance3D" parent="." unique_id=493854574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+material_override = SubResource("StandardMaterial3D_gnvl2")
+mesh = SubResource("BoxMesh_eniso")
+
+[node name="Bar3" type="MeshInstance3D" parent="." unique_id=1021383997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+material_override = SubResource("StandardMaterial3D_gnvl2")
+mesh = SubResource("BoxMesh_h7f7f")
+
+[node name="LockLight" type="MeshInstance3D" parent="." unique_id=1610665094]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, 0)
+material_override = SubResource("StandardMaterial3D_hyqvu")
+mesh = SubResource("BoxMesh_l0hko")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1927864602]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+shape = SubResource("BoxShape3D_fs8gs")
+
+[node name="SignFront" type="Node3D" parent="." unique_id=249422747 instance=ExtResource("2_e4luk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.35, 0.19000001)
+
+[node name="SignBack" type="Node3D" parent="." unique_id=1977736968 instance=ExtResource("2_e4luk")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2.35, -0.19000001)

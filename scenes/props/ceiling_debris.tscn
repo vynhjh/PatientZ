@@ -1,0 +1,71 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://assets/materials/lab_ceiling.tres" id="1_ppbm7"]
+[ext_resource type="Material" path="res://assets/materials/prop_metal_dirty.tres" id="2_fagmw"]
+[ext_resource type="Material" path="res://assets/materials/prop_rubber.tres" id="3_sxghw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_laa8q"]
+size = Vector3(1.2, 0.04, 1.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_st273"]
+size = Vector3(1.2, 0.04, 1.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_13pd4"]
+size = Vector3(1.2, 0.04, 1.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lhy0y"]
+size = Vector3(2.6, 0.08, 0.12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8cs54"]
+size = Vector3(0.012, 0.012, 1.1250913)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ciefr"]
+size = Vector3(0.012, 0.012, 0.6876729)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6d455"]
+size = Vector3(0.012, 0.012, 0.87125593)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j8d7b"]
+size = Vector3(0.012, 0.012, 1.0421529)
+
+[node name="CeilingDebris" type="Node3D" unique_id=1139765436]
+
+[node name="Panel1" type="MeshInstance3D" parent="." unique_id=1403774495]
+transform = Transform3D(-0.94979215, 0.12922683, -0.28494787, 0.1149164, 0.9911498, 0.066455826, 0.29101387, 0.030374035, -0.9562366, -0.7, 0.15, -0.03191313)
+material_override = ExtResource("1_ppbm7")
+mesh = SubResource("BoxMesh_laa8q")
+
+[node name="Panel2" type="MeshInstance3D" parent="." unique_id=990593332]
+transform = Transform3D(-0.8925908, 0.1566742, -0.42277044, 0.11616889, 0.98594, 0.12011265, 0.43564487, 0.05809867, -0.89824164, 0, 0.2, -0.23391913)
+material_override = ExtResource("1_ppbm7")
+mesh = SubResource("BoxMesh_st273")
+
+[node name="Panel3" type="MeshInstance3D" parent="." unique_id=1015725990]
+transform = Transform3D(0.27439734, -0.0661031, -0.9593417, 0.12020644, 0.9921671, -0.033982676, 0.9540736, -0.10599429, 0.28019404, 0.7, 0.25, -0.15164654)
+material_override = ExtResource("1_ppbm7")
+mesh = SubResource("BoxMesh_13pd4")
+
+[node name="Beam" type="MeshInstance3D" parent="." unique_id=511940007]
+transform = Transform3D(0.93231046, -0.20848273, 0.29552022, 0.21822962, 0.97589743, 0, -0.28839743, 0.064491265, 0.9553365, 0, 0.35, 0.2)
+material_override = ExtResource("2_fagmw")
+mesh = SubResource("BoxMesh_lhy0y")
+
+[node name="Wire1" type="MeshInstance3D" parent="." unique_id=1451866544]
+transform = Transform3D(-0.59087926, 0, -0.80676, 0, 1, 0, 0.80676, 0, -0.59087926, 0.6448387, 0.02, 0.46790028)
+material_override = ExtResource("3_sxghw")
+mesh = SubResource("BoxMesh_8cs54")
+
+[node name="Wire2" type="MeshInstance3D" parent="." unique_id=798685449]
+transform = Transform3D(-0.7916249, 0, -0.6110074, 0, 1, 0, 0.6110074, 0, -0.7916249, -0.53766114, 0.02, 0.09090865)
+material_override = ExtResource("3_sxghw")
+mesh = SubResource("BoxMesh_ciefr")
+
+[node name="Wire3" type="MeshInstance3D" parent="." unique_id=1286897510]
+transform = Transform3D(0.29020563, 0, -0.9569643, 0, 1, 0, 0.9569643, 0, 0.29020563, 0.75472164, 0.02, -0.2919278)
+material_override = ExtResource("3_sxghw")
+mesh = SubResource("BoxMesh_6d455")
+
+[node name="Wire4" type="MeshInstance3D" parent="." unique_id=1346697137]
+transform = Transform3D(-0.27673528, 0, -0.9609462, 0, 1, 0, 0.9609462, 0, -0.27673528, 0.32278323, 0.02, 0.4733513)
+material_override = ExtResource("3_sxghw")
+mesh = SubResource("BoxMesh_j8d7b")

@@ -1,0 +1,92 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://assets/materials/prop_cork.tres" id="1_2ie5w"]
+[ext_resource type="Material" path="res://assets/materials/prop_metal_dirty.tres" id="2_yfxmf"]
+[ext_resource type="Material" path="res://assets/materials/prop_photo_0.tres" id="3_o3e2v"]
+[ext_resource type="Material" path="res://assets/materials/prop_photo_1.tres" id="4_vit6w"]
+[ext_resource type="Material" path="res://assets/materials/prop_photo_2.tres" id="5_bsact"]
+[ext_resource type="Material" path="res://assets/materials/prop_photo_3.tres" id="6_u7d7k"]
+[ext_resource type="Material" path="res://assets/materials/prop_paper.tres" id="7_u86gc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8l0lb"]
+size = Vector3(1.2, 0.8, 0.03)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vyj8l"]
+size = Vector3(1.24, 0.03, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ucyf7"]
+size = Vector3(1.24, 0.03, 0.04)
+
+[sub_resource type="QuadMesh" id="QuadMesh_6hndg"]
+size = Vector2(0.17, 0.2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_mrai5"]
+size = Vector2(0.17, 0.2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_lxogi"]
+size = Vector2(0.17, 0.2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_lcmv3"]
+size = Vector2(0.17, 0.2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_d1rmv"]
+size = Vector2(0.2, 0.26)
+
+[sub_resource type="QuadMesh" id="QuadMesh_brthb"]
+size = Vector2(0.2, 0.26)
+
+[node name="MissingBoard" type="Node3D" unique_id=2108551891]
+
+[node name="Board" type="MeshInstance3D" parent="." unique_id=872905089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.015)
+material_override = ExtResource("1_2ie5w")
+mesh = SubResource("BoxMesh_8l0lb")
+
+[node name="FrameTop" type="MeshInstance3D" parent="." unique_id=1593339871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.415, 0.02)
+material_override = ExtResource("2_yfxmf")
+mesh = SubResource("BoxMesh_vyj8l")
+
+[node name="FrameBottom" type="MeshInstance3D" parent="." unique_id=1727704362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.415, 0.02)
+material_override = ExtResource("2_yfxmf")
+mesh = SubResource("BoxMesh_ucyf7")
+
+[node name="Title" type="Label3D" parent="." unique_id=98820650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.033)
+pixel_size = 0.0022
+shaded = true
+modulate = Color(0.55, 0.03, 0.03, 1)
+text = "MISSING"
+font_size = 64
+outline_size = 0
+
+[node name="Pin1" type="MeshInstance3D" parent="." unique_id=2038668513]
+transform = Transform3D(0.99983376, -0.018231783, 0, 0.018231783, 0.99983376, 0, 0, 0, 1, -0.45, 0.05, 0.032)
+material_override = ExtResource("3_o3e2v")
+mesh = SubResource("QuadMesh_6hndg")
+
+[node name="Pin2" type="MeshInstance3D" parent="." unique_id=1592082493]
+transform = Transform3D(0.99495256, -0.10034643, 0, 0.10034643, 0.99495256, 0, 0, 0, 1, -0.2, 0.08, 0.033)
+material_override = ExtResource("4_vit6w")
+mesh = SubResource("QuadMesh_mrai5")
+
+[node name="Pin3" type="MeshInstance3D" parent="." unique_id=1855607879]
+transform = Transform3D(0.99784434, 0.06562527, 0, -0.06562527, 0.99784434, 0, 0, 0, 1, 0.05, 0.02, 0.034)
+material_override = ExtResource("5_bsact")
+mesh = SubResource("QuadMesh_lxogi")
+
+[node name="Pin4" type="MeshInstance3D" parent="." unique_id=1072959131]
+transform = Transform3D(0.9896196, -0.14371169, 0, 0.14371169, 0.9896196, 0, 0, 0, 1, 0.3, 0.07, 0.035)
+material_override = ExtResource("6_u7d7k")
+mesh = SubResource("QuadMesh_lcmv3")
+
+[node name="Pin5" type="MeshInstance3D" parent="." unique_id=1108155985]
+transform = Transform3D(0.9943866, -0.105807394, 0, 0.105807394, 0.9943866, 0, 0, 0, 1, -0.35, -0.25, 0.036)
+material_override = ExtResource("7_u86gc")
+mesh = SubResource("QuadMesh_d1rmv")
+
+[node name="Pin6" type="MeshInstance3D" parent="." unique_id=1951293599]
+transform = Transform3D(0.9977749, -0.06667297, 0, 0.06667297, 0.9977749, 0, 0, 0, 1, 0.15, -0.24, 0.037)
+material_override = ExtResource("7_u86gc")
+mesh = SubResource("QuadMesh_brthb")

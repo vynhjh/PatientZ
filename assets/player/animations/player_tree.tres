@@ -1,0 +1,104 @@
+[gd_resource type="AnimationNodeBlendTree" format=3]
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_r7kj2"]
+filter_enabled = true
+filters = ["c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:HeadEnd_07", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:Head_06", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftArm_037", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftEye_09", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftFingerBase_040", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftForeArm_038", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandIndex0_045", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandIndex1_046", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandIndex2_047", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandIndex3_048", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandIndex4_049", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandMiddle1_050", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandMiddle2_051", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandMiddle3_052", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandMiddle4_053", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandPinky0_058", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandPinky1_059", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandPinky2_060", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandPinky3_061", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandPinky4_062", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandRing1_054", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandRing2_055", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandRing3_056", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandRing4_057", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandThumb1_041", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandThumb2_042", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandThumb3_043", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHandThumb4_044", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftHand_039", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:LeftShoulder_036", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:Neck_05", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightArm_011", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightEye_08", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightFingerBase_014", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightForeArm_012", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandIndex0_019", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandIndex1_020", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandIndex2_021", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandIndex3_022", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandIndex4_023", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandMiddle1_024", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandMiddle2_025", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandMiddle3_026", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandMiddle4_027", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandPinky0_032", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandPinky1_00", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandPinky2_033", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandPinky3_034", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandPinky4_035", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandRing1_028", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandRing2_029", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandRing3_030", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandRing4_031", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandThumb1_015", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandThumb2_016", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandThumb3_017", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHandThumb4_018", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightHand_013", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:RightShoulder_010", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:Spine1_03", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:Spine2_04", "c655f26aceab4b4ea315c4e42b631f4e_fbx/RootNode1/master/Reference/Object_9/Skeleton3D:Spine_02"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iln2b"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_v740g"]
+xfade_time = 0.25
+input_0/name = "idle"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "walk"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "run"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iamo1"]
+animation = &"guns/rifle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xpwl5"]
+animation = &"guns/rifle"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_tdaq1"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_kk8hf"]
+fadein_time = 0.04
+fadeout_time = 0.12
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ju5rg"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_5v1h1"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oecya"]
+animation = &"guns/shotgun"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ysexa"]
+animation = &"guns/shotgun"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_wvxpg"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_54efc"]
+fadein_time = 0.04
+fadeout_time = 0.12
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r55ii"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_xklei"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_u6niy"]
+xfade_time = 0.15
+input_0/name = "rifle"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "shotgun"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[resource]
+nodes/output/position = Vector2(1300, 50)
+nodes/walk/node = SubResource("AnimationNodeAnimation_r55ii")
+nodes/walk/position = Vector2(0, 0)
+nodes/walk_speed/node = SubResource("AnimationNodeTimeScale_xklei")
+nodes/walk_speed/position = Vector2(200, 0)
+nodes/weapon/node = SubResource("AnimationNodeTransition_u6niy")
+nodes/weapon/position = Vector2(800, 250)
+nodes/rifle_hold/node = SubResource("AnimationNodeAnimation_xpwl5")
+nodes/rifle_hold/position = Vector2(0, 200)
+nodes/rifle_hold_speed/node = SubResource("AnimationNodeTimeScale_tdaq1")
+nodes/rifle_hold_speed/position = Vector2(200, 200)
+nodes/rifle_fire/node = SubResource("AnimationNodeAnimation_iamo1")
+nodes/rifle_fire/position = Vector2(200, 330)
+nodes/rifle_shot/node = SubResource("AnimationNodeOneShot_kk8hf")
+nodes/rifle_shot/position = Vector2(450, 220)
+nodes/shotgun_hold/node = SubResource("AnimationNodeAnimation_ysexa")
+nodes/shotgun_hold/position = Vector2(0, 500)
+nodes/shotgun_hold_speed/node = SubResource("AnimationNodeTimeScale_wvxpg")
+nodes/shotgun_hold_speed/position = Vector2(200, 500)
+nodes/shotgun_fire/node = SubResource("AnimationNodeAnimation_oecya")
+nodes/shotgun_fire/position = Vector2(200, 630)
+nodes/shotgun_shot/node = SubResource("AnimationNodeOneShot_54efc")
+nodes/shotgun_shot/position = Vector2(450, 520)
+nodes/arms/node = SubResource("AnimationNodeBlend2_r7kj2")
+nodes/arms/position = Vector2(1050, 50)
+nodes/idle/node = SubResource("AnimationNodeAnimation_iln2b")
+nodes/idle/position = Vector2(-200, -150)
+nodes/run/node = SubResource("AnimationNodeAnimation_ju5rg")
+nodes/run/position = Vector2(-200, 150)
+nodes/run_speed/node = SubResource("AnimationNodeTimeScale_5v1h1")
+nodes/run_speed/position = Vector2(0, 150)
+nodes/locomotion/node = SubResource("AnimationNodeTransition_v740g")
+nodes/locomotion/position = Vector2(200, 0)
+node_connections = [&"output", 0, &"arms", &"walk_speed", 0, &"walk", &"weapon", 0, &"rifle_shot", &"weapon", 1, &"shotgun_shot", &"rifle_hold_speed", 0, &"rifle_hold", &"rifle_shot", 0, &"rifle_hold_speed", &"rifle_shot", 1, &"rifle_fire", &"shotgun_hold_speed", 0, &"shotgun_hold", &"shotgun_shot", 0, &"shotgun_hold_speed", &"shotgun_shot", 1, &"shotgun_fire", &"arms", 0, &"locomotion", &"arms", 1, &"weapon", &"run_speed", 0, &"run", &"locomotion", 0, &"idle", &"locomotion", 1, &"walk_speed", &"locomotion", 2, &"run_speed"]

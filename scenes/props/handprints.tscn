@@ -1,0 +1,37 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/handprint.png" id="1_fq020"]
+
+[node name="Handprints" type="Node3D" unique_id=1872377728]
+
+[node name="Hand1" type="Decal" parent="." unique_id=1608060111]
+transform = Transform3D(0.94760394, -0.31944755, 0, -1.3963496e-08, -4.1421085e-08, -1, 0.31944755, 0.94760394, -4.371139e-08, 0.0396333, -0.04145159, 0)
+size = Vector3(0.24, 0.3, 0.26)
+texture_albedo = ExtResource("1_fq020")
+upper_fade = 0.1
+lower_fade = 0.1
+cull_mask = 1
+
+[node name="Hand2" type="Decal" parent="." unique_id=1839349232]
+transform = Transform3D(0.83245236, 0.5540966, 0, 2.422033e-08, -3.6387647e-08, -1, -0.5540966, 0.83245236, -4.371139e-08, 0.288126, -0.16977924, 0)
+size = Vector3(0.24, 0.3, 0.26)
+texture_albedo = ExtResource("1_fq020")
+upper_fade = 0.1
+lower_fade = 0.1
+cull_mask = 1
+
+[node name="Hand3" type="Decal" parent="." unique_id=1682801034]
+transform = Transform3D(0.99585235, 0.090983815, 0, 3.977029e-09, -4.353009e-08, -1, -0.090983815, 0.99585235, -4.371139e-08, 0.5658889, -0.3366325, 0)
+size = Vector3(0.24, 0.3, 0.26)
+texture_albedo = ExtResource("1_fq020")
+upper_fade = 0.1
+lower_fade = 0.1
+cull_mask = 1
+
+[node name="Hand4" type="Decal" parent="." unique_id=1807827537]
+transform = Transform3D(0.9902738, 0.13913256, 0, 6.0816774e-09, -4.3286242e-08, -1, -0.13913256, 0.9902738, -4.371139e-08, 0.7944442, -0.53990114, 0)
+size = Vector3(0.24, 0.3, 0.26)
+texture_albedo = ExtResource("1_fq020")
+upper_fade = 0.1
+lower_fade = 0.1
+cull_mask = 1

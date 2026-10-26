@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/items/medical_syringe.glb" id="1_model"]
+
+[node name="Syringe" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="Glow" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06, 0.04, 0.05)
+light_color = Color(0.75, 1, 0.8, 1)
+light_energy = 0.35
+omni_range = 0.4

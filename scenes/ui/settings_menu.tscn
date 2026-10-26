@@ -1,0 +1,109 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/settings_menu.gd" id="1_script"]
+
+[node name="SettingsMenu" type="VBoxContainer"]
+custom_minimum_size = Vector2(520, 0)
+theme_override_constants/separation = 15
+alignment = 1
+script = ExtResource("1_script")
+
+[node name="SettingsPanel" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Title" type="Label" parent="SettingsPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.1, 0.1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="VolumeButton" type="Button" parent="SettingsPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Volume"
+
+[node name="BackButton" type="Button" parent="SettingsPanel"]
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[node name="VolumePanel" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="VolumePanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.1, 0.1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Volume"
+horizontal_alignment = 1
+
+[node name="MasterLabel" type="Label" parent="VolumePanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "General Volume"
+
+[node name="MasterRow" type="HBoxContainer" parent="VolumePanel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MasterSlider" type="HSlider" parent="VolumePanel/MasterRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(420, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+step = 1.0
+value = 100.0
+
+[node name="MasterValue" type="Label" parent="VolumePanel/MasterRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="MusicLabel" type="Label" parent="VolumePanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Music Volume"
+
+[node name="MusicRow" type="HBoxContainer" parent="VolumePanel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MusicSlider" type="HSlider" parent="VolumePanel/MusicRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(420, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+step = 1.0
+value = 100.0
+
+[node name="MusicValue" type="Label" parent="VolumePanel/MusicRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="BackButton" type="Button" parent="VolumePanel"]
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[connection signal="pressed" from="SettingsPanel/VolumeButton" to="." method="_on_volume_button_pressed"]
+[connection signal="pressed" from="SettingsPanel/BackButton" to="." method="_on_settings_back_pressed"]
+[connection signal="value_changed" from="VolumePanel/MasterRow/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="VolumePanel/MusicRow/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="pressed" from="VolumePanel/BackButton" to="." method="_on_volume_back_pressed"]

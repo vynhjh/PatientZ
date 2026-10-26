@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/items/bandage_roll.glb" id="1_model"]
+
+[node name="Bandage" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+transform = Transform3D(0.055, 0, 0, 0, 0, -0.055, 0, 0.055, 0, 0, 0.055, 0)

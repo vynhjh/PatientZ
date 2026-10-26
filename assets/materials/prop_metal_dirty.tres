@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/rusty_metal.png" id="1_i6reb"]
+
+[resource]
+albedo_color = Color(0.85, 0.85, 0.85, 1)
+albedo_texture = ExtResource("1_i6reb")
+metallic = 0.55
+roughness = 0.6
+uv1_scale = Vector3(1.5, 1.5, 1.5)
+uv1_triplanar = true

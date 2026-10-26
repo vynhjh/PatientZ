@@ -1,0 +1,27 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/wall_message.gd" id="1_kdjku"]
+[ext_resource type="Texture2D" path="res://assets/textures/blood_drips.png" id="2_yvs5t"]
+
+[node name="WallMessage" type="Node3D" unique_id=1248236535]
+script = ExtResource("1_kdjku")
+
+[node name="Text" type="Label3D" parent="." unique_id=1018475442]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+pixel_size = 0.004
+shaded = true
+alpha_cut = 1
+modulate = Color(0.42, 0.02, 0.02, 0.92)
+text = "HELP US"
+font_size = 160
+outline_size = 0
+
+[node name="Drips" type="Decal" parent="." unique_id=2097337811]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.45, 0)
+size = Vector3(1.4, 0.3, 0.9)
+texture_albedo = ExtResource("2_yvs5t")
+upper_fade = 0.1
+lower_fade = 0.1
+cull_mask = 1

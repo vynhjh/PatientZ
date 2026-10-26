@@ -1,0 +1,61 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://assets/materials/prop_paper.tres" id="1_j8s2t"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_0dkpk"]
+size = Vector2(0.21, 0.29)
+
+[sub_resource type="QuadMesh" id="QuadMesh_0kxei"]
+size = Vector2(0.21, 0.29)
+
+[sub_resource type="QuadMesh" id="QuadMesh_fy5vo"]
+size = Vector2(0.21, 0.29)
+
+[sub_resource type="QuadMesh" id="QuadMesh_i6g5d"]
+size = Vector2(0.21, 0.29)
+
+[sub_resource type="QuadMesh" id="QuadMesh_34omi"]
+size = Vector2(0.21, 0.29)
+
+[sub_resource type="QuadMesh" id="QuadMesh_svg15"]
+size = Vector2(0.21, 0.29)
+
+[sub_resource type="QuadMesh" id="QuadMesh_mxctn"]
+size = Vector2(0.21, 0.29)
+
+[node name="Papers" type="Node3D" unique_id=982333294]
+
+[node name="Paper1" type="MeshInstance3D" parent="." unique_id=985968851]
+transform = Transform3D(0.975026, 0.22209081, 9.707898e-09, 0, -4.371139e-08, 1, 0.22209081, -0.975026, -4.261974e-08, -0.32820973, 0.004, -0.24352211)
+material_override = ExtResource("1_j8s2t")
+mesh = SubResource("QuadMesh_0dkpk")
+
+[node name="Paper2" type="MeshInstance3D" parent="." unique_id=1549510332]
+transform = Transform3D(-0.9723095, 0.23369683, 1.0215213e-08, 0, -4.371139e-08, 1, 0.23369683, 0.9723095, 4.2501e-08, -0.5009489, 0.006, 0.047899723)
+material_override = ExtResource("1_j8s2t")
+mesh = SubResource("QuadMesh_0kxei")
+
+[node name="Paper3" type="MeshInstance3D" parent="." unique_id=1113848436]
+transform = Transform3D(-0.28195068, 0.9594289, 4.193797e-08, 0, -4.371139e-08, 1, 0.9594289, 0.28195068, 1.2324456e-08, 0.16464645, 0.008, -0.015955478)
+material_override = ExtResource("1_j8s2t")
+mesh = SubResource("QuadMesh_fy5vo")
+
+[node name="Paper4" type="MeshInstance3D" parent="." unique_id=818490860]
+transform = Transform3D(-0.99137795, 0.13103327, 5.7276464e-09, 0, -4.371139e-08, 1, 0.13103327, 0.99137795, 4.3334506e-08, 0.5770016, 0.01, 0.24619722)
+material_override = ExtResource("1_j8s2t")
+mesh = SubResource("QuadMesh_i6g5d")
+
+[node name="Paper5" type="MeshInstance3D" parent="." unique_id=1561190231]
+transform = Transform3D(-0.35704082, 0.93408877, 4.0830315e-08, 0, -4.371139e-08, 1, 0.93408877, 0.35704082, 1.560675e-08, 0.57527053, 0.012, 0.27052557)
+material_override = ExtResource("1_j8s2t")
+mesh = SubResource("QuadMesh_34omi")
+
+[node name="Paper6" type="MeshInstance3D" parent="." unique_id=103146120]
+transform = Transform3D(-0.31802198, -0.94808334, -4.144204e-08, 0, -4.371139e-08, 1, -0.94808334, 0.31802198, 1.3901182e-08, 0.48445308, 0.014, -0.05942893)
+material_override = ExtResource("1_j8s2t")
+mesh = SubResource("QuadMesh_svg15")
+
+[node name="Paper7" type="MeshInstance3D" parent="." unique_id=2042675798]
+transform = Transform3D(-0.9950559, 0.09931624, 4.341251e-09, 0, -4.371139e-08, 1, 0.09931624, 0.9950559, 4.3495277e-08, 0.32015085, 0.016, -0.21142069)
+material_override = ExtResource("1_j8s2t")
+mesh = SubResource("QuadMesh_mxctn")

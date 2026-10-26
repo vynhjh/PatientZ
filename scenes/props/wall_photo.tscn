@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/wall_photo.gd" id="1_81rhk"]
+[ext_resource type="Material" path="res://assets/materials/prop_photo_0.tres" id="2_kkbm7"]
+[ext_resource type="Material" path="res://assets/materials/prop_tape.tres" id="3_vyygf"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_g13dq"]
+size = Vector2(0.2, 0.235)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yj7jq"]
+size = Vector3(0.08, 0.025, 0.002)
+
+[node name="Photo" type="Node3D" unique_id=205184277]
+script = ExtResource("1_81rhk")
+
+[node name="Picture" type="MeshInstance3D" parent="." unique_id=1133010008]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.004)
+material_override = ExtResource("2_kkbm7")
+mesh = SubResource("QuadMesh_g13dq")
+
+[node name="Tape" type="MeshInstance3D" parent="." unique_id=1417954839]
+transform = Transform3D(0.9887711, -0.14943814, 0, 0.14943814, 0.9887711, 0, 0, 0, 1, 0, 0.115, 0.006)
+material_override = ExtResource("3_vyygf")
+mesh = SubResource("BoxMesh_yj7jq")

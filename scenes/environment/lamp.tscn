@@ -1,0 +1,24 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/lamp.gd" id="lamp_script"]
+[ext_resource type="Material" path="res://assets/materials/lamp_panel.tres" id="1_l7tty"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5dawy"]
+size = Vector3(1.4, 0.06, 0.5)
+
+[node name="Lamp" type="Node3D" unique_id=678439893]
+script = ExtResource("lamp_script")
+
+[node name="Panel" type="MeshInstance3D" parent="." unique_id=752897095]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.17, 0)
+material_override = ExtResource("1_l7tty")
+mesh = SubResource("BoxMesh_5dawy")
+
+[node name="Light" type="OmniLight3D" parent="." unique_id=1317733258]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, 0)
+light_color = Color(0.85, 0.93, 1, 1)
+light_energy = 1.8
+shadow_enabled = true
+omni_range = 11.0

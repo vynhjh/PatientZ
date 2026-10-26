@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/wall_crack.gd" id="1_3piem"]
+[ext_resource type="Texture2D" path="res://assets/textures/crack_0.png" id="2_cn1t1"]
+
+[node name="WallCrack" type="Node3D" unique_id=60638155]
+script = ExtResource("1_3piem")
+
+[node name="Crack" type="Decal" parent="." unique_id=1703694510]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+size = Vector3(1.2, 0.3, 1.2)
+texture_albedo = ExtResource("2_cn1t1")
+upper_fade = 0.05
+lower_fade = 0.05
+cull_mask = 1

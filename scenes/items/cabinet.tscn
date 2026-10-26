@@ -1,0 +1,155 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/items/cabinet.gd" id="1_cww7w"]
+[ext_resource type="PackedScene" path="res://scenes/items/syringe.tscn" id="syringe_scene"]
+[ext_resource type="PackedScene" path="res://scenes/items/bandage.tscn" id="bandage_scene"]
+[ext_resource type="PackedScene" path="res://scenes/items/keycard.tscn" id="keycard_scene"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_866ti"]
+albedo_color = Color(0.88, 0.9, 0.92, 1)
+metallic = 0.2
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wx6ik"]
+albedo_color = Color(0.25, 0.27, 0.3, 1)
+roughness = 0.6
+
+[sub_resource type="BoxMesh" id="BoxMesh_yuqhh"]
+size = Vector3(0.9, 1.75, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rhfbl"]
+size = Vector3(0.9, 0.03, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g1o0v"]
+size = Vector3(0.9, 0.03, 0.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mu3at"]
+albedo_color = Color(0.8, 0.83, 0.86, 1)
+metallic = 0.3
+roughness = 0.35
+
+[sub_resource type="BoxMesh" id="BoxMesh_w54ti"]
+size = Vector3(1, 1.85, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h1ymm"]
+size = Vector3(0.04, 0.3, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v5eu5"]
+size = Vector3(1, 1.9, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thcaa"]
+albedo_color = Color(0.35, 0.4, 0.25, 1)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="BoxMesh_bcea0"]
+size = Vector3(0.3, 0.15, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_BackWall"]
+size = Vector3(1, 1.9, 0.03)
+
+[sub_resource type="BoxMesh" id="BoxMesh_LeftWall"]
+size = Vector3(0.03, 1.9, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_RightWall"]
+size = Vector3(0.03, 1.9, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Top"]
+size = Vector3(1, 0.03, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Bottom"]
+size = Vector3(1, 0.06, 0.5)
+
+[node name="Cabinet" type="StaticBody3D" unique_id=1423718315]
+script = ExtResource("1_cww7w")
+
+[node name="Body" type="Node3D" parent="."]
+
+[node name="BackWall" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, -0.235)
+material_override = SubResource("StandardMaterial3D_866ti")
+mesh = SubResource("BoxMesh_BackWall")
+
+[node name="LeftWall" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485, 0.95, 0)
+material_override = SubResource("StandardMaterial3D_866ti")
+mesh = SubResource("BoxMesh_LeftWall")
+
+[node name="RightWall" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.485, 0.95, 0)
+material_override = SubResource("StandardMaterial3D_866ti")
+mesh = SubResource("BoxMesh_RightWall")
+
+[node name="Top" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.885, 0)
+material_override = SubResource("StandardMaterial3D_866ti")
+mesh = SubResource("BoxMesh_Top")
+
+[node name="Bottom" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0)
+material_override = SubResource("StandardMaterial3D_866ti")
+mesh = SubResource("BoxMesh_Bottom")
+
+[node name="Back" type="MeshInstance3D" parent="." unique_id=1535022997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, -0.21)
+material_override = SubResource("StandardMaterial3D_wx6ik")
+mesh = SubResource("BoxMesh_yuqhh")
+
+[node name="Shelf1" type="MeshInstance3D" parent="." unique_id=1566878004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.03)
+material_override = SubResource("StandardMaterial3D_866ti")
+mesh = SubResource("BoxMesh_rhfbl")
+
+[node name="Shelf2" type="MeshInstance3D" parent="." unique_id=90354975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0.03)
+material_override = SubResource("StandardMaterial3D_866ti")
+mesh = SubResource("BoxMesh_g1o0v")
+
+[node name="Syringe" parent="." instance=ExtResource("syringe_scene")]
+unique_name_in_owner = true
+transform = Transform3D(0, -2, 0, 2, 0, 0, 0, 0, 2, 0.08, 1.07, 0.08)
+visible = false
+
+[node name="Keycard" parent="." instance=ExtResource("keycard_scene")]
+unique_name_in_owner = true
+transform = Transform3D(1.6, 0, 0, 0, 0, 1.6, 0, -1.6, 0, 0.05, 1.022, 0.05)
+visible = false
+
+[node name="Hinge" type="Node3D" parent="." unique_id=1483634762]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.27)
+
+[node name="Door" type="MeshInstance3D" parent="Hinge" unique_id=1840389169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.95, 0)
+material_override = SubResource("StandardMaterial3D_mu3at")
+mesh = SubResource("BoxMesh_w54ti")
+
+[node name="Handle" type="MeshInstance3D" parent="Hinge" unique_id=450737049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 1, 0.04)
+material_override = SubResource("StandardMaterial3D_wx6ik")
+mesh = SubResource("BoxMesh_h1ymm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2021993689]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+shape = SubResource("BoxShape3D_v5eu5")
+
+[node name="Bandages" type="Node3D" parent="." unique_id=1076886496]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 1.015, 0.05)
+visible = false
+
+[node name="Bandage1" parent="Bandages" instance=ExtResource("bandage_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06, 0, 0)
+
+[node name="Bandage2" parent="Bandages" instance=ExtResource("bandage_scene")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0.07, 0, 0.03)
+
+[node name="Bandage3" parent="Bandages" instance=ExtResource("bandage_scene")]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.02, 0.045, -0.09)
+
+[node name="AmmoBox" type="MeshInstance3D" parent="." unique_id=1824024765]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 1.1, 0.05)
+visible = false
+material_override = SubResource("StandardMaterial3D_thcaa")
+mesh = SubResource("BoxMesh_bcea0")

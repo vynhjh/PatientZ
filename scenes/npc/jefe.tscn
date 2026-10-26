@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/npc/jefe_npc.gd" id="1_jefe"]
+[ext_resource type="PackedScene" path="res://assets/npc/doctor.fbx" id="2_doctor"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_whun1"]
+size = Vector3(0.7, 1.8, 0.5)
+
+[node name="Jefe" type="StaticBody3D"]
+script = ExtResource("1_jefe")
+
+[node name="Model" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Doctor" parent="Model" instance=ExtResource("2_doctor")]
+transform = Transform3D(8, 0, 0, 0, 0, -8, 0, 8, 0, 0, 1.744, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("BoxShape3D_whun1")

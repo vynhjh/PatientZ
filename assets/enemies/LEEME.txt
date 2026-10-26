@@ -1,0 +1,1 @@
+Modelo de los infectados (Zombie_Walking.fbx). Para cambiarlo, edita MODEL_PATH en scripts/enemies/infectado_ai.gd

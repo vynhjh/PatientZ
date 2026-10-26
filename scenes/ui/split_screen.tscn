@@ -1,0 +1,72 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/split_screen.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="2_hud"]
+
+[node name="SplitScreen" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Halves" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="Player1View" type="SubViewportContainer" parent="Halves"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+stretch = true
+
+[node name="View1" type="SubViewport" parent="Halves/Player1View"]
+unique_name_in_owner = true
+handle_input_locally = false
+audio_listener_enable_3d = true
+size = Vector2i(638, 720)
+render_target_update_mode = 4
+
+[node name="Camera1" type="Camera3D" parent="Halves/Player1View/View1"]
+unique_name_in_owner = true
+current = true
+far = 200.0
+
+[node name="HUD1" parent="Halves/Player1View/View1" instance=ExtResource("2_hud")]
+player_number = 1
+
+[node name="Player2View" type="SubViewportContainer" parent="Halves"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+stretch = true
+
+[node name="View2" type="SubViewport" parent="Halves/Player2View"]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(638, 720)
+render_target_update_mode = 4
+
+[node name="Camera2" type="Camera3D" parent="Halves/Player2View/View2"]
+unique_name_in_owner = true
+current = true
+far = 200.0
+
+[node name="HUD2" parent="Halves/Player2View/View2" instance=ExtResource("2_hud")]
+player_number = 2

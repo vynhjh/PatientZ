@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/scratches.png" id="1_3ba3t"]
+
+[node name="Scratches" type="Node3D" unique_id=1913055705]
+
+[node name="Marks" type="Decal" parent="." unique_id=1503585836]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+size = Vector3(0.9, 0.3, 0.9)
+texture_albedo = ExtResource("1_3ba3t")
+upper_fade = 0.1
+lower_fade = 0.1
+cull_mask = 1

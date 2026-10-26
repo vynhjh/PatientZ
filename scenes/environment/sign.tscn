@@ -1,0 +1,54 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/stairs_sign.gd" id="1_3j3ds"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcbmq"]
+albedo_color = Color(0.08, 0.1, 0.12, 1)
+metallic = 0.3
+roughness = 0.6
+
+[sub_resource type="BoxMesh" id="BoxMesh_x6eis"]
+resource_local_to_scene = true
+size = Vector3(2, 0.5, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v57gh"]
+albedo_color = Color(0.6, 0.55200005, 0.36, 1)
+metallic = 0.5
+roughness = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_e50f5"]
+resource_local_to_scene = true
+size = Vector3(2.06, 0.03, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_36cuy"]
+resource_local_to_scene = true
+size = Vector3(2.06, 0.03, 0.06)
+
+[node name="Sign" type="Node3D" unique_id=249422747]
+script = ExtResource("1_3j3ds")
+
+[node name="Plate" type="MeshInstance3D" parent="." unique_id=349775928]
+unique_name_in_owner = true
+material_override = SubResource("StandardMaterial3D_qcbmq")
+mesh = SubResource("BoxMesh_x6eis")
+
+[node name="FrameTop" type="MeshInstance3D" parent="." unique_id=559224853]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material_override = SubResource("StandardMaterial3D_v57gh")
+mesh = SubResource("BoxMesh_e50f5")
+
+[node name="FrameBottom" type="MeshInstance3D" parent="." unique_id=1530585708]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+material_override = SubResource("StandardMaterial3D_v57gh")
+mesh = SubResource("BoxMesh_36cuy")
+
+[node name="Label" type="Label3D" parent="." unique_id=1584862100]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03)
+pixel_size = 0.0032291666
+double_sided = false
+modulate = Color(1.4, 1.288, 0.84000003, 1.4)
+text = "STAIRS"
+font_size = 96

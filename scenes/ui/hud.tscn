@@ -1,0 +1,251 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/hud.gd" id="1_0mwgc"]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/item_slot.tscn" id="item_slot"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/rifle.png" id="icon_rifle"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/shotgun.png" id="icon_shotgun"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/bandage.png" id="icon_bandage"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/syringe.png" id="icon_syringe"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/keycard.png" id="icon_keycard"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqnrr"]
+bg_color = Color(0.1, 0.1, 0.1, 0.7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bo48s"]
+bg_color = Color(0.85, 0.12, 0.1, 1)
+
+[node name="HUD" type="CanvasLayer" unique_id=420435992]
+layer = 10
+script = ExtResource("1_0mwgc")
+
+[node name="AlarmTint" type="ColorRect" parent="." unique_id=696878646]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(1, 0, 0, 0)
+
+[node name="Flash" type="ColorRect" parent="." unique_id=584166270]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0.8, 0, 0, 0)
+
+[node name="Root" type="Control" parent="." unique_id=313614725]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Status" type="VBoxContainer" parent="Root" unique_id=438914930]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 20.0
+offset_bottom = 16.0
+theme_override_constants/separation = 2
+
+[node name="HealthLabel" type="Label" parent="Root/Status" unique_id=1420906503]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+
+[node name="HealthBar" type="ProgressBar" parent="Root/Status" unique_id=1943770365]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 14)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_hqnrr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bo48s")
+show_percentage = false
+
+[node name="InfectionLabel" type="Label" parent="Root/Status" unique_id=1551275437]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+
+[node name="KillsLabel" type="Label" parent="Root/Status" unique_id=225668866]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(1, 0.55, 0.45, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+
+[node name="StanceLabel" type="Label" parent="Root/Status" unique_id=1421277560]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(0.8, 0.85, 0.9, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+
+[node name="WeaponLabel" type="Label" parent="Root/Status" unique_id=2005481493]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_colors/font_color = Color(1, 0.85, 0.4, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+
+[node name="ObjectiveLabel" type="Label" parent="Root" unique_id=140985426]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -560.0
+offset_top = 16.0
+offset_right = -20.0
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(0.6, 0.9, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+horizontal_alignment = 2
+autowrap_mode = 3
+
+[node name="Crosshair" type="ColorRect" parent="Root" unique_id=1029521140]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.9)
+
+[node name="ToastLabel" type="Label" parent="Root" unique_id=624325179]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+offset_top = 90.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(1, 1, 0.85, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+horizontal_alignment = 1
+
+[node name="PromptLabel" type="Label" parent="Root" unique_id=1921700615]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 60.0
+theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+horizontal_alignment = 1
+
+[node name="ItemSlots" type="HBoxContainer" parent="Root"]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -134.0
+offset_right = 280.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="SlotRifle" parent="Root/ItemSlots" instance=ExtResource("item_slot")]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("icon_rifle")
+key_text = "1"
+title = "M-9 Rifle"
+
+[node name="SlotShotgun" parent="Root/ItemSlots" instance=ExtResource("item_slot")]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("icon_shotgun")
+key_text = "2"
+title = "Shotgun"
+
+[node name="SlotBandages" parent="Root/ItemSlots" instance=ExtResource("item_slot")]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("icon_bandage")
+key_text = "3"
+title = "Bandages"
+
+[node name="SlotSyringes" parent="Root/ItemSlots" instance=ExtResource("item_slot")]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("icon_syringe")
+key_text = ""
+title = "Syringes"
+
+[node name="SlotKeycard" parent="Root/ItemSlots" instance=ExtResource("item_slot")]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("icon_keycard")
+key_text = ""
+title = "Keycard"
+
+[node name="ControlsLabel" type="Label" parent="Root" unique_id=213800757]
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -32.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 1, 1, 0.55)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "W A S D move · Shift run · C crouch · E talk · F interact · Click shoot · Right click aim · R reload · 1-2 weapons · 3 bandage · Q put away weapon · L flashlight · H hide UI · F11 full screen"
+horizontal_alignment = 1
+
+[node name="DeathPanel" type="ColorRect" parent="." unique_id=1256497558]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.25, 0, 0, 0.75)
+
+[node name="DiedLabel" type="Label" parent="DeathPanel" unique_id=123266197]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -64.0
+offset_bottom = -64.0
+theme_override_font_sizes/font_size = 56
+theme_override_colors/font_color = Color(1, 0.2, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "YOU DIED
+[R] Load last save"
+horizontal_alignment = 1
+vertical_alignment = 1

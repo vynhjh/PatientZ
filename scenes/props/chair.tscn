@@ -1,0 +1,77 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://assets/materials/prop_plastic_blue.tres" id="1_kydwf"]
+[ext_resource type="Material" path="res://assets/materials/prop_metal_dirty.tres" id="2_4gep6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_84fso"]
+size = Vector3(0.44, 0.04, 0.42)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2iam6"]
+size = Vector3(0.44, 0.4, 0.035)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gcdif"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.45
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_agskj"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.45
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lrwua"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.45
+radial_segments = 12
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2qhbk"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 0.45
+radial_segments = 12
+rings = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7v14y"]
+size = Vector3(0.48, 0.9, 0.48)
+
+[node name="Chair" type="StaticBody3D" unique_id=1275774814]
+
+[node name="Seat" type="MeshInstance3D" parent="." unique_id=415767705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = ExtResource("1_kydwf")
+mesh = SubResource("BoxMesh_84fso")
+
+[node name="Back" type="MeshInstance3D" parent="." unique_id=1832855388]
+transform = Transform3D(1, 0, 0, 0, 0.9950042, 0.09983342, 0, -0.09983342, 0.9950042, 0, 0.7, -0.21)
+material_override = ExtResource("1_kydwf")
+mesh = SubResource("BoxMesh_2iam6")
+
+[node name="LegLB" type="MeshInstance3D" parent="." unique_id=1209130681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19, 0.225, -0.18)
+material_override = ExtResource("2_4gep6")
+mesh = SubResource("CylinderMesh_gcdif")
+
+[node name="LegLF" type="MeshInstance3D" parent="." unique_id=1416266672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19, 0.225, 0.18)
+material_override = ExtResource("2_4gep6")
+mesh = SubResource("CylinderMesh_agskj")
+
+[node name="LegRB" type="MeshInstance3D" parent="." unique_id=1440886299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19, 0.225, -0.18)
+material_override = ExtResource("2_4gep6")
+mesh = SubResource("CylinderMesh_lrwua")
+
+[node name="LegRF" type="MeshInstance3D" parent="." unique_id=984514062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19, 0.225, 0.18)
+material_override = ExtResource("2_4gep6")
+mesh = SubResource("CylinderMesh_2qhbk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=669944763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+shape = SubResource("BoxShape3D_7v14y")

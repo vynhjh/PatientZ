@@ -1,0 +1,94 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/pause_menu.gd" id="1_f6eus"]
+[ext_resource type="PackedScene" path="res://scenes/ui/save_slot_list.tscn" id="2_8uki6"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=479495626]
+process_mode = 3
+layer = 30
+script = ExtResource("1_f6eus")
+
+[node name="Root" type="Control" parent="." unique_id=1386871849]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Shade" type="ColorRect" parent="Root" unique_id=708920848]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.75)
+
+[node name="CenterContainer" type="CenterContainer" parent="Root" unique_id=1473540529]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Column" type="VBoxContainer" parent="Root/CenterContainer" unique_id=1191122272]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MainPanel" type="VBoxContainer" parent="Root/CenterContainer/Column" unique_id=441128433]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="Root/CenterContainer/Column/MainPanel" unique_id=1034214575]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+theme_override_colors/font_color = Color(0.85, 0.1, 0.1, 1)
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="Root/CenterContainer/Column/MainPanel" unique_id=470714469]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 46)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Resume"
+
+[node name="SaveGameButton" type="Button" parent="Root/CenterContainer/Column/MainPanel" unique_id=1385610921]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 46)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Save Game"
+
+[node name="LoadButton" type="Button" parent="Root/CenterContainer/Column/MainPanel" unique_id=1961302166]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 46)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Load Game"
+
+[node name="MainMenuButton" type="Button" parent="Root/CenterContainer/Column/MainPanel" unique_id=1610957044]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 46)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Main Menu"
+
+[node name="InfoLabel" type="Label" parent="Root/CenterContainer/Column/MainPanel" unique_id=2096525304]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 1, 1, 0.6)
+horizontal_alignment = 1
+
+[node name="Slots" type="VBoxContainer" parent="Root/CenterContainer/Column" unique_id=1046619438 instance=ExtResource("2_8uki6")]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[connection signal="pressed" from="Root/CenterContainer/Column/MainPanel/ResumeButton" to="." method="resume"]
+[connection signal="pressed" from="Root/CenterContainer/Column/MainPanel/SaveGameButton" to="." method="_on_save_game_pressed"]
+[connection signal="pressed" from="Root/CenterContainer/Column/MainPanel/LoadButton" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Root/CenterContainer/Column/MainPanel/MainMenuButton" to="." method="_on_main_menu"]
+[connection signal="slot_chosen" from="Root/CenterContainer/Column/Slots" to="." method="_on_slot_chosen"]
+[connection signal="new_slot_chosen" from="Root/CenterContainer/Column/Slots" to="." method="_on_new_save"]
+[connection signal="back_pressed" from="Root/CenterContainer/Column/Slots" to="." method="_show_main"]

@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/weapons/shotgun.glb" id="1_model"]
+
+[node name="Shotgun" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+transform = Transform3D(0, 0, -0.128, 0, 0.128, 0, 0.128, 0, 0, 0, -0.0064, -0.384)
+
+[node name="Muzzle" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.077, -0.86)

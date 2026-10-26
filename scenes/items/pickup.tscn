@@ -1,0 +1,76 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/items/item_pickup.gd" id="1_pickup"]
+
+[ext_resource type="PackedScene" path="res://scenes/weapons/m4a1.tscn" id="gun_m4"]
+
+[ext_resource type="PackedScene" path="res://scenes/weapons/shotgun.tscn" id="gun_shotgun"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fv8d6"]
+albedo_color = Color(0.7, 0.72, 0.75, 1)
+metallic = 0.7
+roughness = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_yllof"]
+size = Vector3(1.6, 0.06, 0.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_007gh"]
+size = Vector3(0.05, 0.9, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_04gt1"]
+size = Vector3(0.05, 0.9, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_riso0"]
+size = Vector3(0.05, 0.9, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pcib8"]
+size = Vector3(0.05, 0.9, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qfmum"]
+size = Vector3(1.6, 0.95, 0.8)
+
+[node name="Pickup" type="StaticBody3D" unique_id=1547636642]
+script = ExtResource("1_pickup")
+
+[node name="TableTop" type="MeshInstance3D" parent="." unique_id=488957826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_fv8d6")
+mesh = SubResource("BoxMesh_yllof")
+
+[node name="Leg1" type="MeshInstance3D" parent="." unique_id=668976078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72, 0.45, -0.32)
+material_override = SubResource("StandardMaterial3D_fv8d6")
+mesh = SubResource("BoxMesh_007gh")
+
+[node name="Leg2" type="MeshInstance3D" parent="." unique_id=1053142379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72, 0.45, 0.32)
+material_override = SubResource("StandardMaterial3D_fv8d6")
+mesh = SubResource("BoxMesh_04gt1")
+
+[node name="Leg3" type="MeshInstance3D" parent="." unique_id=424249032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72, 0.45, -0.32)
+material_override = SubResource("StandardMaterial3D_fv8d6")
+mesh = SubResource("BoxMesh_riso0")
+
+[node name="Leg4" type="MeshInstance3D" parent="." unique_id=1491111620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72, 0.45, 0.32)
+material_override = SubResource("StandardMaterial3D_fv8d6")
+mesh = SubResource("BoxMesh_pcib8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=431125156]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47, 0)
+shape = SubResource("BoxShape3D_qfmum")
+
+[node name="RifleModel" type="Node3D" parent="." unique_id=1048790997]
+unique_name_in_owner = true
+
+[node name="ShotgunModel" type="Node3D" parent="." unique_id=828540272]
+unique_name_in_owner = true
+visible = false
+
+[node name="M4A1" parent="RifleModel" instance=ExtResource("gun_m4")]
+transform = Transform3D(0, 0, 1, 1, 0, 0, 0, 1, 0, 0.22, 0.975, 0.02)
+
+[node name="Shotgun" parent="ShotgunModel" instance=ExtResource("gun_shotgun")]
+transform = Transform3D(0, 0, 1, 1, 0, 0, 0, 1, 0, 0.3, 0.962, 0.02)
